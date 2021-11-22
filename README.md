@@ -4,8 +4,6 @@ https://chainlink-fall-hackathon-2021.devpost.com/?ref_feature=challenge&ref_med
 
 ChooseRealEstate. smartzip chainlink and store data to ceramic profile. 
 
-https://market.link/data-providers/7c5a6a8c-5008-4f5f-8914-6264f45bff61/integrations
-
 https://market.link/data-providers/c8fc4b66-66a5-4e24-8d11-85d19553c03c/integrations
 
 ceramic:
