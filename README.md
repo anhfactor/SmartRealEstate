@@ -2,7 +2,7 @@
 
 https://chainlink-fall-hackathon-2021.devpost.com/?ref_feature=challenge&ref_medium=discover.
 
-ChooseRealEstate. smartzip chainlink and store data to ceramic profile. 
+ChooseRealEstate. ProspectNow chainlink (to inspect price in 50 state in US) and store data to ceramic profile. 
 
 https://market.link/data-providers/c8fc4b66-66a5-4e24-8d11-85d19553c03c/integrations
 
