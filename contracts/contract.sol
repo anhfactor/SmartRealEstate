@@ -24,7 +24,6 @@ contract RealEstateDataConsumer is ChainlinkClient {
     function requestDataProspectNow(string memory _propertyZip) public returns (bytes32 requestId) {
         Chainlink.Request memory req = buildChainlinkRequest(jobId, address(this), this.fulfillProspectNow.selector);
         req.add("propertyZip", _propertyZip);
-        uint256 fee = 0.1 * 10 ** 18; // 0.1 LINK
         return sendChainlinkRequestTo(oracle, req, fee);
     }
 
