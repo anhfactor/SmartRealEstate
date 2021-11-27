@@ -1,5 +1,5 @@
 {
-  "name": "hardhat-hackathon-boilerplate",
+  "name": "smart-real-estate",
   "version": "1.0.0",
   "description": "A boilerplate repository to get you started with Hardhat and Ethereum development",
   "directories": {
@@ -26,10 +26,14 @@
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.0",
     "@nomiclabs/hardhat-waffle": "^2.0.0",
+    "dotenv": "^10.0.0",
     "chai": "^4.2.0",
     "ethereum-waffle": "^3.1.1",
     "ethers": "^5.0.0",
-    "hardhat": "^2.0.4",
+    "hardhat": "^2.7.0",
     "husky": "^4.2.5"
+  },
+  "dependencies": {
+    "@chainlink/contracts": "^0.2.2"
   }
 }
