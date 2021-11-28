@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Section, Form } from "../components";
+import { setRealEstate } from "../helpers/contract"
 
 const HomeContactContainer = () => {
+  const [name, setName] = useState();
+  const [image, setImage] = useState();
+  const [description, setDescription] = useState();
+  const [location, setLocation] = useState();
+  const [price, setPrice] = useState();
+
   return (
     <Section bgColor="--bs-fade-blue">
       <Section.InnerContainer>
@@ -36,25 +43,40 @@ const HomeContactContainer = () => {
             <Section.FlexItem width="30%" bg="true">
               <Form>
                 <Form.FormGroup>
-                  <Form.Input type="text" placeholder="Your Name" />
+                  <Form.Input type="text" placeholder="Name" 
+                  value={name}
+                  onChange={(e) => { 
+                    setName(e.currentTarget.value)
+                  }}/>
                 </Form.FormGroup>
                 <Form.FormGroup>
-                  <Form.Input type="text" placeholder="Your Email" />
+                  <Form.Input type="text" placeholder="Image" value={image}
+                  onChange={(e) => { 
+                    setImage(e.currentTarget.value)
+                  }}/>
                 </Form.FormGroup>
                 <Form.FormGroup>
-                  <Form.Input type="text" placeholder="Your Phone Number" />
+                  <Form.Input type="text" placeholder="Description" value={description}
+                  onChange={(e) => { 
+                    setDescription(e.currentTarget.value)
+                  }}/>
                 </Form.FormGroup>
                 <Form.FormGroup>
-                  <Form.TextArea
-                    placeholder="Your Message"
-                    name=""
-                    id=""
-                    cols="30"
-                    rows="10"></Form.TextArea>
+                  <Form.Input type="text" placeholder="Location" value={location}
+                  onChange={(e) => { 
+                    setLocation(e.currentTarget.value)
+                  }}/>
                 </Form.FormGroup>
-
                 <Form.FormGroup>
-                  <Form.SubmitInput type="submit" value="Send Message" />
+                  <Form.Input type="text" placeholder="Price" value={price}
+                  onChange={(e) => { 
+                    setPrice(e.currentTarget.value)
+                  }}/>
+                </Form.FormGroup>
+                
+                <Form.FormGroup>
+                  <Form.ButtonInput value="Offer real estate" 
+                  onClick={() => setRealEstate(name, image, description, location, price)}/>
                 </Form.FormGroup>
               </Form>
             </Section.FlexItem>

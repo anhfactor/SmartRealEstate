@@ -38,7 +38,7 @@ contract RealEstateContract is ChainlinkClient {
         string location;
         uint price;
     }
-    uint internal realEstateLength = 0;
+    uint public realEstateLength = 0;
 
     // save a particular real estate to the blockchain
     function setRealEstate(

@@ -11,6 +11,8 @@ import {
   RangeInput,
   TextArea,
   Span,
+  InputText,
+  ButtonInput
 } from "./styles/form";
 
 const Form = ({ children, ...restProps }) => {
@@ -32,8 +34,16 @@ Form.Input = ({ children, ...restProps }) => {
   return <Input {...restProps} />;
 };
 
+Form.InputText = ({ children, ...restProps }) => {
+  return <InputText {...restProps} />;
+};
+
 Form.SubmitInput = ({ children, ...restProps }) => {
   return <SubmitInput {...restProps} />;
+};
+
+Form.ButtonInput = ({ children, ...restProps }) => {
+  return <ButtonInput {...restProps} />;
 };
 
 Form.SubmitInput = ({ children, ...restProps }) => {

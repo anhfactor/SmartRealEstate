@@ -4,7 +4,7 @@ import { HeaderWrapper, Banner, Jumbotron } from "../components";
 
 import { AdvancedSearchContainer, SideNavigationContainer } from "./index";
 
-const HeaderContainer = ({ bg, source }) => {
+const HeaderContainer = ({ address, bg, source, connectWallet }) => {
   const [sideNavShown, setSideNavShown] = useState(false);
   const [sideNavHidden, setSideNavHidden] = useState(true);
   const [fixed, setFixed] = useState(false);
@@ -44,9 +44,13 @@ const HeaderContainer = ({ bg, source }) => {
             </HeaderWrapper.List>
             <HeaderWrapper.List>
               <HeaderWrapper.Item>
-                <HeaderWrapper.Anchor special="true">
-                  Connect wallet
-                </HeaderWrapper.Anchor>
+                {address == undefined ?
+                  <HeaderWrapper.Anchor special="true" onClick={connectWallet} to={window.location.pathname}>
+                    Connect wallet
+                  </HeaderWrapper.Anchor>
+                : <HeaderWrapper.Anchor special="true" onClick={connectWallet} to={window.location.pathname}>
+                0x...{address.substr(-12)}
+              </HeaderWrapper.Anchor>}
               </HeaderWrapper.Item>
             </HeaderWrapper.List>
             <HeaderWrapper.List side="side">
@@ -62,14 +66,14 @@ const HeaderContainer = ({ bg, source }) => {
       {bg === "true" && (
         <Jumbotron>
           <Jumbotron.Left>
-            <Jumbotron.Title>Find The Home You Deserve With Us</Jumbotron.Title>
+            <Jumbotron.Title>Get the price when you input ZipCode state</Jumbotron.Title>
             <Jumbotron.Text>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat,
-              exercitationem.
+              We offers detailed information for every property on record in the United States, 
+              including over 100 million residential properties and 42 million commercial properties across all 50 states.
             </Jumbotron.Text>
           </Jumbotron.Left>
           <Jumbotron.Right>
-            <AdvancedSearchContainer />
+            <AdvancedSearchContainer address={address} />
           </Jumbotron.Right>
         </Jumbotron>
       )}

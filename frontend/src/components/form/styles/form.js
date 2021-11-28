@@ -50,6 +50,31 @@ export const Input = styled.input.attrs({ type: "text" })`
   }
 `;
 
+export const InputText = styled.input.attrs({ type: "text" })`
+  width: 50%;
+  display:inline-block;
+  padding: 14px 9px;
+  outline: none;
+  border-radius: 2px;
+  cursor: pointer;
+  resize: none;
+  font-size: 1rem;
+  background: white;
+  box-shadow: none;
+  border: 1px solid #edf0f9;
+  color: var(--bs-secondary);
+
+  ::placeholder,
+  ::-webkit-input-placeholder {
+    color: grey;
+    font-family: "Mulish", sans-serif;
+  }
+  :-ms-input-placeholder {
+    color: grey;
+    font-family: "Mulish", sans-serif;
+  }
+`;
+
 export const RangeInput = styled.input`
   display: block;
   width: 100%;
@@ -59,7 +84,36 @@ export const SubmitInput = styled.input.attrs({
   type: "submit",
 })`
   width: 50%;
-  display: block;
+  display:inline-block;
+  outline: none;
+  border-radius: 2px;
+  border: none;
+  background-color: var(--bs-primary);
+  padding: 12px 8px;
+  color: var(--bs-white);
+  cursor: pointer;
+  font-size: 1.2rem;
+  opacity: 1;
+  box-shadow: var(--primary-box-shadow);
+  border: 1px solid var(--bs-blue);
+  transition: all var(--primary-transition-time);
+  &:hover {
+    background-color: var(--bs-white);
+    color: var(--bs-blue);
+  }
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
+`;
+
+export const ButtonInput = styled.input.attrs({
+  type: "button",
+})`
+  width: 50%;
+  display:inline-block;
   outline: none;
   border-radius: 2px;
   border: none;
