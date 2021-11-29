@@ -2,14 +2,19 @@
 
 https://chainlink-fall-hackathon-2021.devpost.com/?ref_feature=challenge&ref_medium=discover.
 
-ChooseRealEstate. ProspectNow chainlink (to inspect price in 50 state in US) and store data to ceramic profile. 
+- ChooseRealEstate. ProspectNow chainlink (to inspect price in 50 state in US) and store data to ceramic profile. 
 
 https://market.link/data-providers/c8fc4b66-66a5-4e24-8d11-85d19553c03c/integrations
 
-ceramic:
+- ceramic: (this feature is not complete yet)
 store data - update price feed - see history price.
 
+- Listing real estate when user input (name, price, location, descripion)
+
 Prototype: https://github.com/anhnt4288/SmartRealEstate/blob/master/Smart_RealEstate_Prototype.PPTX 
+
+The project using kovan network: 
+https://kovan.etherscan.io/address/0x2065E703ed98Fa09df31bb1Dea385cc667bDCfF0
 
 ## Quick start
 
@@ -17,22 +22,22 @@ The first things you need to do are cloning this repository and installing its
 dependencies:
 
 ```sh
-git clone https://github.com/nomiclabs/hardhat-hackathon-boilerplate.git
+git clone https://github.com/anhnt4288/SmartRealEstate
 cd hardhat-hackathon-boilerplate
 npm install
 ```
 
-Once installed, let's run Hardhat's testing network:
+Once installed, let's run compile:
 
 ```sh
-npx hardhat node
+npx hardhat compile
 ```
 
 Then, on a new terminal, go to the repository's root folder and run this to
 deploy your contract:
 
 ```sh
-npx hardhat run scripts/deploy.js --network localhost
+npx hardhat run scripts/deploy.js --network kovan
 ```
 
 Finally, we can run the frontend with:
@@ -40,16 +45,8 @@ Finally, we can run the frontend with:
 ```sh
 cd frontend
 npm install
-npm start
+npm run start
 ```
-
-> Note: There's [an issue in `ganache-core`](https://github.com/trufflesuite/ganache-core/issues/650) that can make the `npm install` step fail. 
->
-> If you see `npm ERR! code ENOLOCAL`, try running `npm ci` instead of `npm install`.
-
-Open [http://localhost:3000/](http://localhost:3000/) to see your Dapp. You will
-need to have [Metamask](https://metamask.io) installed and listening to
-`localhost 8545`.
 
 ## User Guide
 
@@ -83,9 +80,4 @@ Your environment will have everything you need to build a Dapp powered by Hardha
 
 ## Feedback, help and news
 
-We'd love to have your feedback on this tutorial. Feel free to reach us through
-this repository or [our Discord server](https://invite.gg/HardhatSupport).
-
-Also you can [follow us on Twitter](https://twitter.com/HardhatHQ).
-
-**Happy _buidling_!**
+We'd love to have your feedback on this demo hackathon. Feel free to reach us through this repository.
