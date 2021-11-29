@@ -16,6 +16,8 @@ Prototype: https://github.com/anhnt4288/SmartRealEstate/blob/master/Smart_RealEs
 The project using kovan network: 
 https://kovan.etherscan.io/address/0x2065E703ed98Fa09df31bb1Dea385cc667bDCfF0
 
+Youtube demo: https://youtu.be/XwfCSmbEuRo
+
 ## Quick start
 
 The first things you need to do are cloning this repository and installing its
