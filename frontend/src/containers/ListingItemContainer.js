@@ -3,12 +3,13 @@ import React from "react";
 import { Listing } from "../components";
 
 const ListingItemContainer = ({ featured, width }) => {
+  console.log(featured.image)
   
   return (
     <Listing width={width}>
       <Listing.Top>
         <Listing.TopItem>
-          <Listing.Image source={featured.images[0]} />
+          <Listing.Image source={featured.image} />
           <Listing.TopItemContainer>
             <Listing.TopItemInfo>
               <Listing.Icon></Listing.Icon>
@@ -20,29 +21,18 @@ const ListingItemContainer = ({ featured, width }) => {
       <Listing.Bottom>
         <Listing.BottomItem>
           <Listing.Title>
-            <Listing.Anchor to={`/property/${featured.id}`}>
-              {featured.title}
+            <Listing.Anchor>
+              {featured.name}
             </Listing.Anchor>
           </Listing.Title>
-          <Listing.Price>Ksh {featured.price}</Listing.Price>
+          <Listing.Price>$ {featured.price}</Listing.Price>
           <Listing.Text description>
-            {featured.description.substring(0, 100)}
+            {featured.description}
           </Listing.Text>
-          <Listing.Button>
-            <Listing.Anchor to={`/property/${featured.id}`}>
-              Details
-            </Listing.Anchor>
-          </Listing.Button>
           <Listing.AgentContainer>
-            <Listing.AgentImageContainer>
-              <Listing.Image
-                src={`/images/agents/${featured.agent.image}`}
-                profile="true"
-              />
-            </Listing.AgentImageContainer>
             <Listing.AgentName>
-              <Listing.Anchor to={`/agents/${featured.agent.name}`}>
-                {featured.agent.name}
+              <Listing.Anchor>
+                Owner: 0x...{featured.owner.substr(-12)}
               </Listing.Anchor>
             </Listing.AgentName>
           </Listing.AgentContainer>

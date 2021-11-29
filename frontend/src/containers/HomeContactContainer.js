@@ -75,7 +75,7 @@ const HomeContactContainer = () => {
                 </Form.FormGroup>
                 
                 <Form.FormGroup>
-                  <Form.ButtonInput value="Offer real estate" 
+                  <Form.ButtonInput value="List real estate" 
                   onClick={() => setRealEstate(name, image, description, location, price)}/>
                 </Form.FormGroup>
               </Form>

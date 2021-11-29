@@ -90,11 +90,10 @@ export const getAllRealEstate = async () => {
   const { signer } = account
   const contract = await getContract(signer)
   const length = await getRealEstateLength();
-
   let realEstates = [];
-  for (let i = 0; i < length; i++) {
+  for (let i = 0; i < length.toNumber(); i++) {
     let realEstate = new Promise(async (resolve, reject) => {
-      let p = await contract.methods.getRealEstate(i).call();
+      let p = await contract.getRealEstate(i);
       resolve({
         index: i,
         owner: p[0],
@@ -102,10 +101,11 @@ export const getAllRealEstate = async () => {
         image: p[2],
         description: p[3],
         location: p[4],
-        price: new BigNumber(p[6])
+        price: new BigNumber(p[5])
       });
     });
     realEstates.push(realEstate);
   }
-  return realEstates;
+  const result = await Promise.all(realEstates)
+  return result;
 }

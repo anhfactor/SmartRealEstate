@@ -48,7 +48,7 @@ Listing.Anchor = ({ children, ...restProps }) => {
   return <Anchor {...restProps}>{children}</Anchor>;
 };
 Listing.Image = ({ source, ...restProps }) => {
-  return <Image src={`/images/houses/${source}`} {...restProps} />;
+  return <Image src={`${source}`} {...restProps} />;
 };
 Listing.ImageContainer = ({ children, ...restProps }) => {
   return <ImageContainer {...restProps}>{children}</ImageContainer>;

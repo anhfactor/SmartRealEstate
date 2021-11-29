@@ -196,9 +196,13 @@ const AdvancedSearchContainer = (address) => {
   }
 
   const getCurrentPrice = async () => {
-    const code = await currentZipState(address.address)
-    const price = await currentProspectNow()
-    alert(`Zipstate: ${code} - price: ${price} per sqft`)
+    try {
+        const code = await currentZipState(address.address)
+        const price = await currentProspectNow()
+        alert(`Zipstate: ${code} - price: ${price} per sqft`)
+    } catch (error) {
+        alert("Please connect your wallet ")
+    }
     
   }
   return (

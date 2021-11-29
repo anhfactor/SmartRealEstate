@@ -7,22 +7,22 @@ const FooterContainer = () => {
       <Footer.Container>
         <Footer.Content>
           <Footer.Item>
-            <Footer.Title>Real Home</Footer.Title>
+            <Footer.Title>Smart real estate</Footer.Title>
             <Footer.Text>
-              1337 Tengecha Road,Nairobi.Imarisha Tower, Second Floor, Room 135
+              Inkai Tower, Fifth Floor, Room 123
             </Footer.Text>
             <Footer.List>
               <Footer.ListItem>
                 <Footer.Icon name="fas fa-phone-alt" social="true" />
-                <Footer.Text>+254720843306</Footer.Text>
+                <Footer.Text>+1234567890</Footer.Text>
               </Footer.ListItem>
               <Footer.ListItem>
                 <Footer.Icon name="fab fa-whatsapp" social="true" />
-                <Footer.Text>+254720843306</Footer.Text>
+                <Footer.Text>+1234567890</Footer.Text>
               </Footer.ListItem>
               <Footer.ListItem>
                 <Footer.Icon name="far fa-envelope" social="true" />
-                <Footer.Text>realhome@gmail.com</Footer.Text>
+                <Footer.Text>smartrealestate@example.com</Footer.Text>
               </Footer.ListItem>
             </Footer.List>
           </Footer.Item>
@@ -31,21 +31,6 @@ const FooterContainer = () => {
             <Footer.List>
               <Footer.ListItem>
                 <Footer.Anchor to="/">Home</Footer.Anchor>
-              </Footer.ListItem>
-              <Footer.ListItem>
-                <Footer.Anchor to="/listing">Properties</Footer.Anchor>
-              </Footer.ListItem>
-              <Footer.ListItem>
-                <Footer.Anchor to="/agents">Agents</Footer.Anchor>
-              </Footer.ListItem>
-              <Footer.ListItem>
-                <Footer.Anchor to="/faqs">FAQs</Footer.Anchor>
-              </Footer.ListItem>
-              <Footer.ListItem>
-                <Footer.Anchor to="/dashboard">Account</Footer.Anchor>
-              </Footer.ListItem>
-              <Footer.ListItem>
-                <Footer.Anchor to="/login">Login</Footer.Anchor>
               </Footer.ListItem>
             </Footer.List>
           </Footer.Item>
@@ -99,7 +84,7 @@ const FooterContainer = () => {
       </Footer.Container>
       <Footer.Bottom>
         <Footer.Container>
-          <Footer.Text>&copy; Real Home. All Rights Reserved</Footer.Text>
+          <Footer.Text>&copy; Smart real estate. All Rights Reserved</Footer.Text>
         </Footer.Container>
       </Footer.Bottom>
     </Footer>
